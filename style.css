@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.main-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.birthday-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-header {
+    margin-bottom: 30px;
+}
+
+.cake-container {
+    margin-bottom: 20px;
+}
+
+.cake {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.plate {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 20px;
+    background: linear-gradient(45deg, #e0e0e0, #f0f0f0);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.layer-bottom {
+    bottom: 15px;
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+}
+
+.layer-middle {
+    bottom: 45px;
+    width: 80px;
+    height: 25px;
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.layer-top {
+    bottom: 70px;
+    width: 60px;
+    height: 20px;
+    background: linear-gradient(45deg, #ffe66d, #ffd93d);
+}
+
+.icing {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 15px;
+    background: linear-gradient(45deg, #ff9ff3, #f368e0);
+    border-radius: 50%;
+}
+
+.candle {
+    position: absolute;
+    bottom: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 25px;
+    background: linear-gradient(45deg, #ff9ff3, #f368e0);
+    border-radius: 4px;
+}
+
+.flame {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 15px;
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 1s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); }
+    100% { transform: translateX(-50%) scale(1.1); }
+}
+
+.sprinkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sprinkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffe66d);
+    border-radius: 50%;
+    animation: sprinkleFloat 3s ease-in-out infinite;
+}
+
+.sprinkle-1 { top: 20%; left: 20%; animation-delay: 0s; }
+.sprinkle-2 { top: 30%; right: 25%; animation-delay: 1s; }
+.sprinkle-3 { bottom: 40%; left: 30%; animation-delay: 2s; }
+
+@keyframes sprinkleFloat {
+    0%, 100% { transform: translateY(0px); opacity: 0.7; }
+    50% { transform: translateY(-8px); opacity: 1; }
+}
+
+.title-container {
+    position: relative;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease-in-out infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    margin-bottom: 30px;
+}
+
+.welcome-message {
+    margin-bottom: 30px;
+}
+
+.message-bubble {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.main-greeting {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.sub-greeting {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.gifts-section {
+    margin-bottom: 40px;
+}
+
+.gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.gift {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gift:hover {
+    transform: translateY(-5px);
+}
+
+.gift-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.gift-content h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.gift-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.wishes-section {
+    margin-bottom: 40px;
+}
+
+.wishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.wish {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wish-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.wish-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.personal-message {
+    margin-bottom: 30px;
+}
+
+.message-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.message-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.card-footer {
+    margin-top: 30px;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.floating-emoji {
+    position: fixed;
+    font-size: 1.5rem;
+    animation: floatEmoji 6s ease-in-out infinite;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.floating-emoji:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-emoji:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+.floating-emoji:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 4s; }
+
+@keyframes floatEmoji {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .birthday-card {
+        padding: 30px 20px;
+        margin: 10px;
+        border-radius: 25px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .name {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .cake {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .plate {
+        width: 120px;
+        height: 18px;
+    }
+    
+    .layer-bottom {
+        width: 80px;
+        height: 25px;
+    }
+    
+    .layer-middle {
+        width: 65px;
+        height: 20px;
+    }
+    
+    .layer-top {
+        width: 50px;
+        height: 15px;
+    }
+    
+    .icing {
+        width: 50px;
+        height: 12px;
+    }
+    
+    .candle {
+        width: 6px;
+        height: 20px;
+    }
+    
+    .flame {
+        width: 10px;
+        height: 12px;
+    }
+    
+    .gifts-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .wishes-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .wish {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .wish-icon {
+        font-size: 1.5rem;
+    }
+    
+    .wish-text {
+        font-size: 0.9rem;
+    }
+    
+    .action-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+        padding: 12px 20px;
+    }
+    
+    .message-bubble {
+        padding: 20px;
+    }
+    
+    .main-greeting {
+        font-size: 1.2rem;
+    }
+    
+    .sub-greeting {
+        font-size: 1rem;
+    }
+    
+    .message-container {
+        padding: 20px;
+    }
+    
+    .message-body p {
+        font-size: 0.95rem;
+    }
+    
+    .floating-emoji {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+    
+    .birthday-card {
+        padding: 25px 15px;
+        border-radius: 20px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .cake {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .plate {
+        width: 100px;
+        height: 15px;
+    }
+    
+    .layer-bottom {
+        width: 65px;
+        height: 20px;
+    }
+    
+    .layer-middle {
+        width: 55px;
+        height: 15px;
+    }
+    
+    .layer-top {
+        width: 45px;
+        height: 12px;
+    }
+    
+    .icing {
+        width: 45px;
+        height: 10px;
+    }
+    
+    .candle {
+        width: 5px;
+        height: 15px;
+    }
+    
+    .flame {
+        width: 8px;
+        height: 10px;
+    }
+    
+    .gift-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    .gift-content p {
+        font-size: 0.85rem;
+    }
+    
+    .wish-text {
+        font-size: 0.85rem;
+    }
+    
+    .action-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .floating-emoji {
+        font-size: 1rem;
+    }
+} 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем Рождения, Асема!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="main-container">
+        <div class="birthday-card">
+            <div class="card-header">
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="plate"></div>
+                        <div class="layer layer-bottom"></div>
+                        <div class="layer layer-middle"></div>
+                        <div class="layer layer-top"></div>
+                        <div class="icing"></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="sprinkles">
+                            <div class="sprinkle sprinkle-1"></div>
+                            <div class="sprinkle sprinkle-2"></div>
+                            <div class="sprinkle sprinkle-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-container">
+                    <h1 class="title">С Днем Рождения!</h1>
+                    <h2 class="name">Асема</h2>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="welcome-message">
+                    <div class="message-bubble">
+                        <p class="main-greeting">Асема, поздравляю тебя с днем рождения! 🎂</p>
+                        <p class="sub-greeting">Ты очень красивая, умная и яркая! Пусть этот год принесет тебе море радости, успеха и новых впечатлений!</p>
+                    </div>
+                </div>
+                <div class="gifts-section">
+                    <h3 class="section-title">Подарки:</h3>
+                    <div class="gifts-grid">
+                        <div class="gift" data-gift="beauty">
+                            <div class="gift-icon"><i class="fas fa-gem"></i></div>
+                            <div class="gift-content">
+                                <h4>Красота</h4>
+                                <p>Ты очень красивая, и это факт! 🌸</p>
+                            </div>
+                        </div>
+                        <div class="gift" data-gift="luck">
+                            <div class="gift-icon"><i class="fas fa-star"></i></div>
+                            <div class="gift-content">
+                                <h4>Удача</h4>
+                                <p>Пусть удача сопутствует тебе во всем! ⭐</p>
+                            </div>
+                        </div>
+                        <div class="gift" data-gift="success">
+                            <div class="gift-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="gift-content">
+                                <h4>Успех</h4>
+                                <p>Все твои цели будут достигнуты! 🏆</p>
+                            </div>
+                        </div>
+                        <div class="gift" data-gift="happiness">
+                            <div class="gift-icon"><i class="fas fa-sun"></i></div>
+                            <div class="gift-content">
+                                <h4>Счастье</h4>
+                                <p>Пусть каждый день приносит радость! ☀️</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wishes-section">
+                    <h3 class="section-title">Пожелания:</h3>
+                    <div class="wishes-container">
+                        <div class="wish">
+                            <div class="wish-icon">💖</div>
+                            <div class="wish-text">Пусть твоя жизнь будет наполнена радостью и позитивом</div>
+                        </div>
+                        <div class="wish">
+                            <div class="wish-icon">🌟</div>
+                            <div class="wish-text">Все твои мечты сбудутся, а цели будут достигнуты</div>
+                        </div>
+                        <div class="wish">
+                            <div class="wish-icon">🌈</div>
+                            <div class="wish-text">Каждый день будет ярким и интересным</div>
+                        </div>
+                        <div class="wish">
+                            <div class="wish-icon">🎭</div>
+                            <div class="wish-text">Твоя жизнь будет увлекательным приключением</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-message">
+                    <div class="message-container">
+                        <div class="message-header">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Особое послание</span>
+                        </div>
+                        <div class="message-body">
+                            <p>Асема, ты потрясающая! 🌍</p>
+                            <p>Твоя красота, доброта и позитив делают мир лучше! ✨</p>
+                            <p>Пусть этот год принесет тебе все, о чем ты мечтаешь! 🎁</p>
+                            <p>С наилучшими пожеланиями! 💕</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="action-btn music-btn" onclick="toggleMusic()">
+                    <i class="fas fa-music"></i> Музыка
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="floating-emoji">🎂</div>
+    <div class="floating-emoji">🎉</div>
+    <div class="floating-emoji">🎈</div>
+    <audio id="birthday-music" loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+    </audio>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
